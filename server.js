@@ -114,6 +114,7 @@ function ensureAuthorized(req, res, next) {
     }
 }
 app.get('/', function(req, res) {
+    console.log('root');
 	res.status(200).send('Everything up and running');
 });
 process.on('uncaughtException', function(err) {
