@@ -1,6 +1,5 @@
 // Required Modules
 var express    = require("express"), 
-	morgan = require("morgan"), 
 	jwt = require("jsonwebtoken"),
 	mongoose = require("mongoose"),
 	bodyParser = require("body-parser"),
