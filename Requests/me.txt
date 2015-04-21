@@ -1,0 +1,11 @@
+GET http://localhost:3001/me HTTP/1.1
+User-Agent: Fiddler
+Content-type: application/json
+Host: localhost:3001
+Content-Length: 73
+authorization: bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJfX3YiOjAsInBhc3N3b3JkIjoiUGFzc3dvcmQxMjMiLCJlbWFpbCI6IndhbG1vbjkzQGhvdG1haWwuY29tIiwiX2lkIjoiNTUzNTQyYTI1YTJmYzc2NDAyMzc5ODBlIn0.aBIj2yNzwCmG9k8Jjie5m387KuGdj_6gsEAC7e-diEc
+
+{
+    "email": "walmon93@hotmail.com",
+    "password": "Password123"
+}

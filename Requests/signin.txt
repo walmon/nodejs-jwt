@@ -1,0 +1,10 @@
+POST http://localhost:3001/signin HTTP/1.1
+User-Agent: Fiddler
+Content-Type: application/json
+Host: localhost:3001
+Content-Length: 59
+
+{
+email:'walmon93@hotmail.com',
+password:'Password123'
+}
