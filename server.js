@@ -8,7 +8,7 @@ var express    = require("express"),
 var privateKey = "thisisasupersecretkey!";
 
 var port = process.env.PORT || 3001;
-var User = require('./models/User');
+var User = require('./models/user');
  
 // Connect to DB
 mongoose.connect("mongodb://localhost/owasp");
