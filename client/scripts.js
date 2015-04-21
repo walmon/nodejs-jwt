@@ -1,4 +1,5 @@
-$(document).ready(function(){
+
+		$(document).ready(function(){
 			var bearerToken = "";
 			$('#btn-get-data').click(function(){
 				var token = $("#token").val();

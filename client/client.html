@@ -2,103 +2,6 @@
 	<head>
 	<meta charset='utf-8'/>
 	<title>Este es un cliente de ejemplo</title>
-
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script> 
-	<style>  
-	body{
-		margin:0;
-		padding:0;
-		color:#F44336;
-		background: #fefefe;
-		font-family:'Segoe UI', Arial;
-		text-align:center;
-	}
-	.content{
-		max-width:960px;
-		margin:50px auto 0 auto;
-	}
-	h1, h2, h3{
-		font-weight:100;
-		margin:0px;
-		padding:0px;
-	}
-	.alert{
-		background:#0091EA;
-		color:#fff;
-		padding:12px;
-		width:auto;
-		display:inline-block;
-		width:400px;
-		margin:12px auto;
-		border-radius:4px;
-  		word-wrap: break-word;
-  		float:left;
-	}
-	.row {
-		width:100%;
-		margin:4px;
-	}
-	form{
-		margin:12px;
-		border:solid 1px #999;
-		width:auto;
-		display:inline-block;
-		width:400px;
-		padding:12px;
-		background:#efefef;
-		color:#666;
-		float:left;
-	}
-	.clearer{
-		clear:both;
-	}
-	section{
-		vertical-align:top;
-		border-bottom:1px solid #666;
-
-	}
-	/* material buttons */
-	 .button {
-      display: inline-block;
-      position: relative;
-      min-width: 120px;
-      height: 32px;
-      line-height: 32px;
-      border-radius: 2px;
-      font-size: 0.9em;
-      background-color: #fff;
-      color: #646464;
-      border:0;
-      cursor:pointer;
-    }
-    .button.blue {
-      background-color: #4285f4;
-      color: #fff;
-    }
-    .button.raised {
-      transition: box-shadow 0.2s cubic-bezier(0.4, 0, 0.2, 1);
-      transition-delay: 0.2s;
-      box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.26);
-    }
-    
-    .button.raised:active {
-      box-shadow: 0 8px 17px 0 rgba(0, 0, 0, 0.2);
-      transition-delay: 0s;
-    }
-    input[type=text], input[type=email], input[type=password]{
-    	border-radius:1px;
-    	border:solid 1px #999;
-    	padding:6px 4px;
-    }
-    header{
-    	background:#DDD;
-    	color:#FAFAFA;
-    	font-weight:bold;
-    	margin:0;
-    	padding:12px;
-    	text-align:left;
-    }
-	</style>
 	</head>
 	<body>
 		<header>OWASP Costa Rica - Walter Montes</header>
@@ -137,44 +40,8 @@
 			<div class='clearer'></div>
 		</section>
 		</div>
-		<script>
-		$(document).ready(function(){
-			var bearerToken = "";
-			$('#btn-get-data').click(function(){
-				var token = $("#token").val();
-				var bearerToken = "bearer " + token;
-				$.ajax({url:'http://localhost:3001/me',
-					beforeSend:function(request){
-						request.setRequestHeader('authorization', bearerToken);
-					}}).done(function(data){
-						$('#result-get').html('ok: ' + JSON.stringify(data));
-				}).fail(function(err){
-					$('#result-get').html("Error al consultar el API: "+ err.statusText);
-				});
-			});
-			$("#signin").submit(function(e){
-				e.preventDefault();
-
-				var args = $(this).serialize();
-
-				$.ajax({url:'http://localhost:3001/signin', method:'post', data:args}).done(function(data){
-					$('#result-signin').html('ok: ' + JSON.stringify(data));
-				}).fail(function(err){
-					$('#result-signin').html("Error al consultar el API: "+ err.statusText);
-				})
-			});
-			$("#login").submit(function(e){
-				e.preventDefault();
-
-				var args = $(this).serialize();
-
-				$.ajax({url:'http://localhost:3001/login', method:'post', data:args}).done(function(data){
-					$('#result-login').html('ok: ' + JSON.stringify(data));
-				}).fail(function(err){
-					$('#result-login').html("Error al consultar el API: "+ err.statusText);
-				})
-			});
-		});
-		</script>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script> 
+		<script src='scripts.js'></script>
+		<link href='styles.css' rel="stylesheet" type="text/css"/>
 	</body>
 </html>

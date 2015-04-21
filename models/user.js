@@ -1,5 +1,6 @@
 'use strict';
-
+// modelo basado en el scaffolding de yeoman
+// https://github.com/DaftMonk/generator-angular-fullstack
 var mongoose = require('mongoose');
 var Schema = mongoose.Schema;
 var crypto = require('crypto');
